@@ -1,0 +1,269 @@
+/***********************************
+WEB FONTS
+*********************************** */
+
+@font-face {
+  font-family: 'Abolition Regular';
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+/***********************************
+BASE STYLES
+*********************************** */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #727272;
+  background: #CFD8DC;
+  margin: 0;
+  font: 1em/1.5 "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 5.625rem; /* 90px/16px  */
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 2px 3px 3px rgba(2,2,2,.8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #212121;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+p {
+  text-size: 1em;
+}
+/***********************************
+PSUEDO-CLASSES
+*********************************** */
+
+a:link {
+  color: #607D8B;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #455A64;
+}
+
+a:hover {
+  color: #9E9E9E;
+}
+
+a:active {
+  color: #212121;
+}
+
+/***********************************
+MAIN STYLES
+*********************************** */
+
+.main-header {
+  padding-top: 170px;
+  height: 850px;
+  background: linear-gradient(#607D8B, transparent 90%),
+              linear-gradient(0deg, #CFD8DC, transparent),
+              #ffa949 url('../img/ranier.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.title {
+  color: #212121;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 1px rgba(2,2,2,.8);
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #607D8B;
+}
+
+.t-border {
+  border-top: 2px solid #B6B6B6;
+}
+
+/***********************************
+LAYOUT STYLES
+*********************************** */
+
+.primary-content,
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.proof {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 10px solid #607D8B;
+  margin: 105px 0 60px;
+  background: #434a52 url('../img/tacoma.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: inset 0 0 50px 10px rgba(0,0,0, .8);
+  border-radius: 10px;
+}
+
+.proof h2 {
+  text-shadow: 2px 3px 3px rgba(2, 2, 2, 0.8);
+}
+
+.arrow {
+  font-size: 5.625rem;
+  color: #212121;
+  width: 50px;
+  margin-top: 150px;
+  text-shadow: 2px 3px 3px rgba(2, 2, 2, 0.8);
+}
+
+/***********************************
+FLOATED COLUMNS
+*********************************** */
+
+.live-commute,
+.tourist-spots {
+  width: 46.5%;
+}
+
+.tourist-spots {
+  float: left;
+}
+
+.live-commute {
+  float: right;
+}
+
+/***********************************
+FLOAT CLEARFIX
+*********************************** */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***********************************
+MEDIA QUERIES
+*********************************** */
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+  .proof {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+  .title {
+    font-size: 1.3rem;
+    border: none;
+  }
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+  .arrow {
+    display: none;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+  .live-commute,
+  .tourist-spots {
+    float: none;
+    width: 100%;
+  }
+  .main-footer {
+    padding: 20px 0;
+  }
+}

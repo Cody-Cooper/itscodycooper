@@ -1,0 +1,47 @@
+/* General -----------------------*/
+
+/** {
+  border: 1px solid red;
+}*/
+
+body {
+  background: #616161;
+
+}
+
+ /* Header -----------------------*/
+
+.main-header {
+  height: 750px;
+  background-image: url("../img/ranier.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.main-header h1 {
+  text-align: center;
+  margin: 0;
+  color: #666;
+}
+
+/* Nav -----------------------*/
+
+.nav {
+  text-align: center;
+  background: #616161;
+}
+
+.nav ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* About section ----------------------- */
+
+/* Proof ----------------------- */
+
+/* Footer ----------------------- */
+
+footer {
+  text-align: center;
+}
