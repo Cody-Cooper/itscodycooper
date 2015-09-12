@@ -2,6 +2,9 @@
 GENERAL
 *************/
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,400,700|Open+Sans:400,400italic,600);
+
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -24,7 +27,6 @@ img {
 
 h3 {
 	margin: 0 0 1em 0;
-
 }
 
 
@@ -35,10 +37,12 @@ HEADER
 
 header {
 	float: left;
+  position: fixed;
+  z-index: 3dp;
 	margin: 0 0 30px 0;
 	padding: 5px 0 0 0;
 	width: 100%;
-  box-shadow: 0px 3px 3px rgba(20, 20, 20, 0.8);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 /* logo alignment */
@@ -48,14 +52,17 @@ header {
   margin: 0;
 }
 
+#logo h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
 
 h1 {
-  font-family: 'Cinzel Decorative', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 15px 0;
   font-size: 1.75em;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 0.8em;
-  text-shadow: 2px 3px 3px rgba(20, 20, 20, 0.8);
 }
 
 h2 {
@@ -70,28 +77,30 @@ h2 {
 NAVIGATION
 *************/
 
-nav {
+.top-nav {
   text-align: center;
   padding: 10px 0;
   margin: 20px 0 0;
 }
 
-nav ul {
+.top-nav ul {
 	list-style: none;
 	margin: 0 10px;
 	padding: 0;
 }
 
-nav li {
+.top-nav li {
 	display: inline-block;
   border-right: 1px solid #B6B6B6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
-nav li:last-child {
+.top-nav li:last-child {
     border: none
 }
 
-nav a {
+.top-nav a {
 	font-weight: 800;
 	padding: 15px 9px 15px 10px;
 }
@@ -132,8 +141,10 @@ PORTFOLIO PAGE
 	float: left;
 	width: 45%;
 	margin: 2.5%;
+  z-index: 1dp;
 	background-color: #f9f9f9;
 	color: #bdc3c7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 #gallery li a p {
@@ -141,6 +152,7 @@ PORTFOLIO PAGE
 	padding: 5%;
 	font-size: 0.75em;
 	color: #727272;
+  font-style: italic;
 }
 
 
@@ -154,6 +166,8 @@ ABOUT PAGE
 	max-width: 150px;
 	margin: 0 auto 30px;
 	border-radius: 100%;
+  z-index: 1dp;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 
