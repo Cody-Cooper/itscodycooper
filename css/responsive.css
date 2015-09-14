@@ -1,5 +1,9 @@
 @media screen and (min-width: 480px) {
 
+  body {
+    padding-top: 9.50em;
+  }
+
   /************
   TWO COLUMN LAYOUT
   *************/
@@ -42,6 +46,10 @@
 
 
 @media screen and (min-width: 660px) {
+
+  body {
+    padding-top: 6.75em;
+  }
 
   /************
     HEADER
