@@ -1,85 +1,389 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Cody Cooper | Professional Portfolio</title>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/jquery.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+<html lang="en">
+<head>
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
 
-<!-- end head -->
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<body>
-		<header>
-			<a href="index.html" id="logo">
-				<h1>Cody Cooper</h1>
-				<h2>Professional Portfolio</h2>
-			</a>
-			<nav class="top-nav">
-			<ul>
-				<li><a href="index.html" class="selected">Portfolio</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			</nav>
-		</header>
+    <!-- Hide the browser UI -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#69f0ae">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
 
+    <!-- Android toolbar color -->
+    <meta name="theme-color" content="#69f0ae">
 
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
 
-<!-- end header/nav content -->
+    <!-- Android touch icons -->
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
 
-		<div id="wrapper">
-			<section>
-				<ul id="gallery">
-					<li>
-						<a href="http://teamtreehouse.com/codycooper">
-							<img src="img/Treehouse-Logo.png" alt="Team Treehouse Logo">
-							<p>Team Treehouse Profile</p>
-						</a>
-					</li>
-					<li>
-						<a href="tacomaisbeautiful.html">
-							<img src="img/tacomaisbeautiful.png" alt="">
-							<p>A single page responsive layout.</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/placeholderimg.png">
-							<img src="img/placeholderimg.png" alt="">
-							<p>Coming soon!</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/placeholderimg.png">
-							<img src="img/placeholderimg.png" alt="">
-							<p>Coming soon!</p>
-						</a>
-					</li>
-					<li>
-						<a href="img/placeholderimg.png">
-							<img src="img/placeholderimg.png" alt="">
-							<p>Coming soon!</p>
-						</a>
-					</li>
-				</ul>
-			</section>
+    <!-- Web app manifest file -->
+    <link rel="manifest" href="favicons/manifest.json">
 
-<!-- end gallery section -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css/wata.min.css">
 
-			<footer>
-				<a href="http://twitter.com/itscodycooper"><img src="img/twitter-wrap.png" alt="twitter logo" class="social-icon"></a>
-				<a href="http://github.com/cody-cooper"><img src="img/github-wrap.png" alt="github" class="social-icon" ></a>
-				<p>&copy; 2014 Cody Cooper | Please hire me.</p>
-			</footer>
-		</div>
+    <!-- Site title -->
+    <title>Cody Cooper | Professional Porfolio</title>
+</head>
+<body>
+    <div id="wrapper">
 
-<!-- end footer content -->
+        <!-- The preloader we see before the whole site is loaded -->
+        <div id="preloader" class="valign-wrapper">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only actually-black">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	</body>
+        <!-- A status spinner to indicate that some process is going on -->
+        <div id="status">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-blue-only actually-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Navigation bar -->
+        <div class="navbar-fixed" id="nav">
+            <nav>
+                <div class="nav-wrapper">
+
+                    <!-- Site name -->
+                    <a href="/" class="brand-logo"><span class="tighter">C</span>ody <span class="tighter">C</span>ooper</a>
+
+                    <!-- Mobile menu button -->
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+                    <!-- Static menu -->
+                    <ul class="right hide-on-med-and-down table-of-contents">
+                        <li><a href="#triangles">Home</a></li>
+                        <li><a href="#services">About</a></li>
+                        <li><a href="#works">Work</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <!-- Mobile menu, make sure it is equal to the statis menu -->
+                    <ul class="side-nav" id="mobile-menu">
+                        <li><a href="#triangles">Home</a></li>
+                        <li><a href="#services">About</a></li>
+                        <li><a href="#works">Work</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Triangles section -->
+        <div id="triangles" class="scrollspy">
+            <div id="output">
+                <div class="h1-wrapper valign-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <!-- Your company's slogan, feel free to add more tags here -->
+                                <h1>Development done right.</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Action button -->
+                    <a class="btn-floating btn-large waves-effect waves-dark green accent-2" id="explore">
+                        <i class="mdi-navigation-arrow-forward indigo-text text-darken-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services section -->
+        <div class="section scrollspy" id="services">
+            <div class="container">
+                <div class="row">
+                    <h2>Front-End Development</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <!-- <p class="flow-text center-align">
+                          nothing to see here...
+                        </p> -->
+                    </div>
+                </div>
+
+                <!-- Row with service icons -->
+                <div class="row services">
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-paint-brush animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Creative designs</h5>
+                        <p>In a sea of boring, make your company stand out! I'll work with you to make a beautiful, well working website.</p>
+                        <!-- <a class="btn waves-effect waves-dark white black-text">Learn more</a> -->
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-desktop animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Responsive</h5>
+                        <p>I write code with a mobile-first mentality. Whether you're on a computer, mobile phone, or tablet my websites will look great.</p>
+                        <a class="btn waves-effect waves-dark white black-text" href="https://johnpolacek.github.io/scrolldeck.js/decks/responsive/">Learn More</a>
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-cog animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Future Friendly</h5>
+                        <p>I follow current technology trends to make sure that your website stands up to the tests of time.</p>
+                        <a class="btn waves-effect waves-dark white black-text" href="http://futurefriendlyweb.com/thinking.html">Learn More</a>
+                    </div>
+                    <div class="col s12 l3">
+                        <i class="fa fa-5x fa-code animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Carefully coded</h5>
+                        <p>My code is clean, readable, and easy to maintain. A pretty website means nothing if it's poorly coded!</p>
+                        <!-- <a class="btn waves-effect waves-dark white black-text">Explore</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Works section -->
+        <div class="section scrollspy" id="works">
+            <div class="container">
+                <div class="row">
+                    <h2>My work</h2>
+                    <!-- Category filter buttons -->
+                    <div class="filter-options">
+                        <a class="btn-flat waves-green-accent waves-effect active" id="all" data-group="all">Everything</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="front-end">Front-end</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="back-end">Back-end</a>
+                        <a class="btn-flat waves-green-accent waves-effect" data-group="design">Design</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wide-container">
+                <!-- Shuffle grid -->
+                <div id="shuffle-grid" class="row">
+                    <a href="ajax/works/etch-a-sketch.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["front-end"]'>
+                        <img src="images/works/etch-a-sketch.png" class="responsive-img" alt="Ice cream">
+                        <h5>Javascript Etch-A-Sketch</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get started section -->
+        <div class="section grey-section" id="get-started">
+            <div class="container">
+                <div class="row">
+                    <h2>Like what you see?</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Let's start building your next project together.
+                        </p>
+                        <p class="center-align">
+                            <a href="#contact" class="waves-effect waves-light btn-large green accent-2 indigo-text text-darken-4">
+                                <i class="fa fa-rocket left"></i>Contact me
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog section -->
+        <div class="section scrollspy" id="blog">
+            <div class="container">
+                <div class="row">
+                    <h2>Latest blog posts</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Blog coming soon...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="wide-container">
+                <div class="row masonry">
+                    <div class="col s12 m6 l8">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="images/blog/bottles.jpg" alt="Bottles">
+                            </div>
+                            <a class="btn-floating btn-large waves-effect waves-dark green accent-2 activator">
+                                <i class="mdi-navigation-expand-less indigo-text text-darken-4"></i>
+                            </a>
+                            <div class="card-reveal">
+                                <span class="card-date grey-text">June 22<sup>nd</sup>, 2015</span>
+                                <span class="card-title black-text">Drink milk <i class="mdi-navigation-expand-more right"></i></span>
+                                <p>
+                                    Throughout the world, there are more than six billion consumers of milk and milk products.
+                                    Over 750 million people live within dairy farming households.
+                                </p>
+                                <p><a href="ajax/blog-posts/drink-milk.html" class="ajax-link">Read the full story</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Contact form section -->
+        <div class="section scrollspy" id="contact">
+            <div class="container">
+                <div class="row">
+                    <h2>Contact me</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Let me know if you want me to work on your project, or just drop a line to say hello. I'm
+                            always glad to receive your messages.
+                        </p>
+                        <p class="right-align">
+                            <i class="fa fa-info-circle"></i> Last name is not required.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col s12 m12 l8 offset-l2" action="php/mailer.php" id="contact-form" novalidate>
+                        <!-- This field helps us avoid spam bots, don't remove it -->
+                        <div class="cant-touch-this">
+                            <input type="text" name="hammertime" tabindex="-1" value="">
+                        </div>
+                        <!-- End of anti-spam field -->
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first-name" name="first-name" type="text" class="required">
+                                <label for="first-name">First name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last-name" name="last-name" type="text">
+                                <label for="last-name">Last name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" class="required">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="message" name="message" class="materialize-textarea required"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="center-align">
+                            <button type="submit" name="send" class="btn-large disabled">
+                                Send
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="wide-container">
+                <div class="row">
+                    <div class="col s12">
+                        <!-- Google map container -->
+                        <div id="map-canvas" class="map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container contact-details">
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <h5>Headquarters</h5>
+                        <div class="divider"></div>
+                        <p>
+                          I'm currently located in beautiful Tacoma, Washington.
+                        </p>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <h5>Reach me</h5>
+                        <div class="divider"></div>
+                        <p>
+                            +1-253-844-1923<br>
+                            <a href="mailto:contact@itscodycooper.com">contact@itscodycooper.com</a>
+                        </p>
+                    </div>
+                    <div class="col s12 m6 l4 modern-connect">
+                        <h5>Everywhere else</h5>
+                        <div class="divider"></div>
+                        <p>
+                            <!-- Add your Skype link here -->
+                            <a href="http://linkedin.com/cody-cooper"><i class="fa fa-linkedin"></i> cody-cooper</a><br>
+                            <a href="http://github.com/cody-cooper"><i class="fa fa-github"></i> cody-cooper</a><br>
+                            <a href="http://twitter.com/itscodycooper"><i class="fa fa-twitter"></i> @itscodycooper</a><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section -->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2015 Cody Cooper | <a href="ajax/pages/privacy-policy.html" class="ajax-link">Privacy policy</a>
+
+                    <!-- Social icons -->
+                    <span class="social right">
+                        <a href="http://github.com/cody-cooper"><i class="fa fa-github"></i></a>
+                        <a href="http://linkedin.com/cody-cooper"><i class="fa fa-linkedin"></i></a>
+                        <a href="http://twitter.com/itscodycooper"><i class="fa fa-twitter"></i></a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Ajax box container, waiting for its turn -->
+    <div id="ajax-box" class="translate"></div>
+
+    <!-- Scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/build.js"></script>
+</body>
 </html>
